@@ -15,7 +15,7 @@ class ApolloProvider extends ServiceProvider {
   boot() {
     const Route = use("Route");
     const config = use("Config");
-    const Server = use("Server");
+    const Server = use("Adonis/Src/Server");
 
     const typeDefs = mergeTypes(
       fileLoader(config.get("graphql.schema"), { recursive: true })
@@ -37,7 +37,7 @@ class ApolloProvider extends ServiceProvider {
       },
       tracing: true
     });
-    // server.installSubscriptionHandlers(Server);
+    server.installSubscriptionHandlers(Server.getInstance());
     server.registerRoutes({
       router: Route,
       disableHealthCheck: false,
