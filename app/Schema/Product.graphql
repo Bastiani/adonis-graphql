@@ -11,3 +11,7 @@ type Query {
 type Mutation {
   addProduct(description: String!, price: Float): Product
 }
+
+type Subscription {
+  productAdded: Product
+}
