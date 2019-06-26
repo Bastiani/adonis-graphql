@@ -15,16 +15,19 @@
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use("Route");
-const GraphQLServer = use("GraphQLServer");
+// const GraphQLServer = use("GraphQLServer");
+// const HelloProvider = use("HelloProvider");
+// const ApolloProvider = use("ApolloProvider");
 // const GraphQLPlayground = use("graphql-playground-middleware-adonis");
 
-Route.post("/", context => {
-  return GraphQLServer.handle(context);
-});
+// Route.post("/", context => {
+//   return ApolloProvider(context);
+// });
 
-Route.get("/graphiql", context => {
-  return GraphQLServer.handleUI(context);
-});
+// Route.get("/graphiql", context => {
+//   HelloProvider();
+//   return ApolloProvider.handleUI(context);
+// });
 
 // Route.get(
 //   "/playground",

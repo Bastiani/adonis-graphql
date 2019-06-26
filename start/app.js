@@ -1,5 +1,7 @@
 "use strict";
 
+const { join } = require("path");
+
 /*
 |--------------------------------------------------------------------------
 | Providers
@@ -16,8 +18,10 @@ const providers = [
   "@adonisjs/bodyparser/providers/BodyParserProvider",
   "@adonisjs/cors/providers/CorsProvider",
   "@adonisjs/lucid/providers/LucidProvider",
-  "adonis-graphql/providers/GraphQLProvider",
-  "lucid-mongo/providers/LucidMongoProvider"
+  // "adonis-graphql/providers/GraphQLProvider",
+  "lucid-mongo/providers/LucidMongoProvider",
+  // join(__dirname, "..", "providers", "Hello/HelloProvider"),
+  join(__dirname, "..", "providers", "Apollo/ApolloProvider")
 ];
 
 /*
