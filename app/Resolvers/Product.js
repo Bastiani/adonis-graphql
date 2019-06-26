@@ -19,8 +19,8 @@ module.exports = {
     }
   },
   Mutation: {
-    addProduct: async (_, { description, price }) => {
-      const product = await Product.create({ id: 1, description, price });
+    addProduct: async (_, { id, description, price }) => {
+      const product = await Product.create({ id, description, price });
       pubsub.publish(EVENTS.PRODUCT.ADDED, { product });
       return product;
     }

@@ -18,7 +18,6 @@ const providers = [
   "@adonisjs/bodyparser/providers/BodyParserProvider",
   "@adonisjs/cors/providers/CorsProvider",
   "@adonisjs/lucid/providers/LucidProvider",
-  "@adonisjs/websocket/providers/WsProvider",
   // "adonis-graphql/providers/GraphQLProvider",
   "lucid-mongo/providers/LucidMongoProvider",
   // join(__dirname, "..", "providers", "Hello/HelloProvider"),

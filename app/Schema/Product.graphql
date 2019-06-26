@@ -1,5 +1,6 @@
 type Product {
   id: ID!
+  _id: ID!
   description: String!
   price: Float
 }
@@ -9,7 +10,7 @@ type Query {
 }
 
 type Mutation {
-  addProduct(description: String!, price: Float): Product
+  addProduct(id: ID!, description: String!, price: Float): Product
 }
 
 type Subscription {
