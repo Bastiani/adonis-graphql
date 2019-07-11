@@ -1,0 +1,9 @@
+type PageInfo {
+  endCursor: String
+  hasNextPage: Boolean!
+}
+type ResultCursor {
+  edges: [Edge]!
+  pageInfo: PageInfo!
+  totalCount: Int!
+}

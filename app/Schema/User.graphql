@@ -1,0 +1,22 @@
+type User {
+  name: String!
+  email: String!
+  password: String!
+}
+
+type Edge {
+  cursor: String!
+  node: User!
+}
+
+type Query {
+  users(after: String, first: Int): ResultCursor
+}
+
+type Mutation {
+  addUser(name: String!, email: String!, password: String!): User
+}
+
+type Subscription {
+  userAdded: User
+}
