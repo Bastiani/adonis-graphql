@@ -9,7 +9,7 @@ function cursor(data, after, first) {
   if (after !== undefined) {
     const buff = new Buffer(after, "base64");
     const id = buff.toString("ascii");
-    const index = data.findIndex(obj => obj.id === id);
+    const index = data.findIndex(obj => obj._id === id);
     if (index === -1) {
       throw new Error("After does not exist");
     }
